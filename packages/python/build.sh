@@ -28,6 +28,11 @@ TERMUX_PKG_EXTRA_CONFIGURE_ARGS+=" ac_cv_buggy_getaddrinfo=no"
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS+=" --enable-loadable-sqlite-extensions"
 # Fix https://github.com/termux/termux-packages/issues/2236:
 TERMUX_PKG_EXTRA_CONFIGURE_ARGS+=" ac_cv_little_endian_double=yes"
+
+#TERMUX_PKG_EXTRA_CONFIGURE_ARGS+=" --enable-optimizations"
+#TERMUX_PKG_EXTRA_CONFIGURE_ARGS+=" --with-computed-gotos"
+TERMUX_PKG_EXTRA_CONFIGURE_ARGS+=" --with-lto"
+
 TERMUX_PKG_RM_AFTER_INSTALL="
 bin/idle*
 lib/python${_MAJOR_VERSION}/idlelib
@@ -42,6 +47,7 @@ TERMUX_PKG_BREAKS="python2 (<= 2.7.15), python-dev"
 TERMUX_PKG_REPLACES="python-dev"
 
 termux_step_pre_configure() {
+	CFLAGS="${CFLAGS/-Oz/-O3}"
 	# Needed when building with clang, as setup.py only probes
 	# gcc for include paths when finding headers for determining
 	# if extension modules should be built (specifically, the
