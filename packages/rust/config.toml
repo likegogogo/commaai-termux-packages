@@ -9,12 +9,13 @@ host = ["@triple@"]
 target = ["@triple@", "wasm32-unknown-unknown"]
 rustc = "@RUSTC@"
 cargo = "@CARGO@"
+docs = false
 
-python = "python2.7"
+python = "python3.8"
 extended = true
 sanitizers = false
 
-#tools = ["cargo", "analysis", "rls", "rustfmt", "clippy-driver" ]
+tools = ["cargo", "analysis", "clippy-driver"]
 
 [install]
 prefix = "@TERMUX_PREFIX@"
@@ -37,4 +38,4 @@ llvm-config = "@TERMUX_PREFIX@/bin/llvm-config"
 
 [dist]
 src-tarball = false
-#missing-tools = true
+missing-tools = true
