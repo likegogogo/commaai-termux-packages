@@ -1,0 +1,8 @@
+TERMUX_PKG_HOMEPAGE=https://github.com/acados/tera_renderer/
+TERMUX_PKG_DESCRIPTION=""
+TERMUX_PKG_LICENSE="BSD 2-Clause"
+TERMUX_PKG_VERSION=0.0.34
+TERMUX_PKG_REVISION=1
+TERMUX_PKG_SHA256=67f3f219c7e3c62d9f9414bc9a7a16e8e9c218ccae34baf1228efc99ec60c948
+TERMUX_PKG_SRCURL=https://github.com/acados/tera_renderer/archive/refs/tags/v$TERMUX_PKG_VERSION.tar.gz
+TERMUX_PKG_BUILD_IN_SRC=true
