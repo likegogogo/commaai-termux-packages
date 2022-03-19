@@ -1,0 +1,9 @@
+TERMUX_PKG_HOMEPAGE=http://dfu-util.sourceforge.net/
+TERMUX_PKG_DESCRIPTION="dfu-util is a host side implementation of the DFU 1.0 and DFU 1.1 specifications of the USB forum"
+TERMUX_PKG_LICENSE="GPL-2.0"
+TERMUX_PKG_MAINTAINER="@termux"
+TERMUX_PKG_VERSION=0.8
+TERMUX_PKG_REVISION=1
+TERMUX_PKG_SRCURL=http://dfu-util.sourceforge.net/releases/dfu-util-${TERMUX_PKG_VERSION}.tar.gz
+TERMUX_PKG_SHA256=55cbde9be12a212bd84bce9d1e63941d9a16139ed0d4912401367eba1502f058
+TERMUX_PKG_BUILD_IN_SRC=true
